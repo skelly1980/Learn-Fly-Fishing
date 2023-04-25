@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Information</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=PT+Serif&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="hompage-container">
+				<div class="homepage-header">
+					<h1>Learn to Fly Fish <br />the easy way</h1>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="hompage-container-2">
+				<div class="homepage-nav-container">
+					<div class="homepage-item-1">
+						<nav class="homepage-nav">
+							<ul>
+								<li><a href="homepage.html">Home</a></li>
+								<li><a href="Aboutme.html">About</a></li>
+								<li><a href="gear.html">Gear</a></li>
+								<li><a href="information.html">Information</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="hamburger-menu-container">
+						<button
+							type="button"
+							class="hamburger"
+							id="menu-btn"
+							aria-label="Left Align">
+							<span class="hamburger-top"></span>
+							<span class="hamburger-middle"></span>
+							<span class="hamburger-bottom"></span>
+						</button>
+						<h2 class="mobile-menu-header">Menu</h2>
+						<!--Mobile Menu-->
+						<div class="mobile-menu hidden" id="menu">
+							<ul>
+								<li><a href="homepage.html">Home</a></li>
+								<li><a href="Aboutme.html">About</a></li>
+								<li><a href="gear.html">Gear</a></li>
+								<li><a href="information.html">Information</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div class="info-item-2">
+				<h2 class="info-header">What you'll need to get started</h2>
+				<div class="info-content">
+					<h3>Required Gear</h3>
+					<div class="info-content-container">
+						<iframe
+							width="460"
+							height="215"
+							src="https://www.youtube.com/embed/rZEyOrpYyqE"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+						<p>
+							Listen to the folks from Mad River about what type of gear you'll
+							need to get started in fly fishing. Brian makes it very simple by
+							breaking things down into a list of six basic things that you need
+							to get started in fly fishing. You can head over to Mad River
+							Outfitters youTube page and view the playlist they created on all
+							six of these listed items. My list of items is almost exactly the
+							same as the list Brain created. You'll need a fly rod, reel, fly
+							line system, some flies, and finally something to hold all of your
+							gear. The common misconception that fly fishing is an expensive
+							hobby is not true. You can get all these items at a budget of
+							somewhere's around $200-$300 dollars. The one thing Brain does not
+							mention is a fishing license. Make sure to follow your local rules
+							and regulations and purchase a fishing license if it is required.
+						</p>
+					</div>
+				</div>
+				<div class="info-content">
+					<h3>Suggestions on how to progress</h3>
+					<div class="info-content-container">
+						<iframe
+							width="460"
+							height="215"
+							src="https://www.youtube.com/embed/3EHGHhpDYeo"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+						<p>
+							After learning the basics on how to cast and set up you gear, I
+							generally discourage people from immediately heading out to your
+							nearest trout stream which is what most people want to do. Trout
+							fishing is generally more difficult. It requires waders which is
+							another large investment that one might not want to spend just
+							yet. I recommend finding a local pond first and chasing some
+							easier, more plentiful fish. This ites in with how to locate spots
+							but catching a bunch of sunfish or bluegills will be a better
+							experience for beginners before heading out to your local trout
+							streams.
+						</p>
+					</div>
+				</div>
+				<div class="info-content">
+					<h3>How to find places close to home</h3>
+					<div class="info-content-container">
+						<iframe
+							width="460"
+							height="215"
+							src="https://www.youtube.com/embed/Of4ajwptifc"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+						<p>
+							When attempting to find local fishing spots the first thing I do
+							is look for town parks or wildlife management areas. Such places
+							can be excellent for beginners as they are usually well
+							maintained. The water is usually clear of trees which leaves
+							plenty of room to back cast with worrying about getting hung up.
+							This also means that waders are not required since you wouldn't
+							have to get in the water. Places like these are usually full of
+							sunfish, bluegill, and largemouth bass. Each of these three
+							species will readily eat flies. Catching 20-30 fish in an hour is
+							not an unresonable expectation. Should you be teaching a child I
+							highly recommend such places as it will keep them very busy.
+						</p>
+					</div>
+
+					<div class="info-database-conatiner">
+						<h3 class="info-database-header">
+							Enter your information into our database and we will find local
+							spots to fish in your area.
+						</h3>
+						<form action="includes/spotfinder.php" method="POST">
+							<div class="info-form-control">
+								<label for="fname" class="info-form-label">First Name:</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="fname"
+										name="fname"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="lname" class="info-form-label">Last Name:</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="lname"
+										name="lname"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="email" class="info-form-label">Email:</label>
+								<span class="info-form-control-span">
+									<input
+										type="email"
+										id="email"
+										name="email"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="street" class="info-form-label">Street</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="street"
+										name="street"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="city" class="info-form-label">City:</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="city"
+										name="city"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="state" class="info-form-label">State:</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="state"
+										name="state"
+										class="info-form-input" />
+								</span>
+							</div>
+							<div class="info-form-control">
+								<label for="zipcode" class="info-form-label">Zipcode:</label>
+								<span class="info-form-control-span">
+									<input
+										type="text"
+										id="zipcode"
+										name="zipcode"
+										class="info-form-input" />
+								</span>
+							</div>
+							<button
+								type="submit"
+								id="submit"
+								class="database-btn"
+								name="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="footer row">
+				<div class="row">
+					<div class="homepage-ul-container">
+						<h3>Companies</h3>
+						<ul>
+							<li>
+								<a href="https://www.orvis.com/" target="_blank">Orvis</a>
+							</li>
+							<li>
+								<a href="https://www.gloomis.com/" target="_blank">Gloomis</a>
+							</li>
+							<li>
+								<a
+									href="https://farbank.com/collections/sage-freshwater-fly-fishing-rods"
+									target="_blank"
+									>Sage</a
+								>
+							</li>
+							<li>
+								<a href="https://farbank.com/pages/redington" target="_blank"
+									>Redington</a
+								>
+							</li>
+							<li>
+								<a href="https://tforods.com/" target="_blank"
+									>Temple Fork Outfitters</a
+								>
+							</li>
+							<li>
+								<a href="https://echoflyfishing.com/" target="_blank">Echo</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="homepage-ul-container">
+						<h3>Fly Shops</h3>
+						<ul>
+							<li>
+								<a href="https://redsflyfishing.com/" target="_blank"
+									>Red's Fly Shop</a
+								>
+							</li>
+							<li>
+								<a href="https://www.tcoflyfishing.com/" target="_blank"
+									>TCO Fly Shop</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.tridentflyfishing.com/?utm_source=bing&utm_medium=cpc&utm_campaign=bing_shopping&msclkid=8f97920b16f712a61efbf060477bd057"
+									target="_blank"
+									>Trident Fly Shop</a
+								>
+							</li>
+							<li>
+								<a href="https://www.tightlinesflyfishing.com/" target="_blank"
+									>Tight Lines Fly Fishing</a
+								>
+							</li>
+							<li>
+								<a href="https://www.compleatangleronline.com/" target="_blank"
+									>Complete Angler</a
+								>
+							</li>
+							<li>
+								<a href="https://www.madriveroutfitters.com/" target="_blank"
+									>Mad River Outfitters</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="homepage-ul-container">
+						<h3>Page Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="Aboutme.html">About</a></li>
+							<li><a href="gear.html">Gear</a></li>
+							<li><a href="information.html">Information</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

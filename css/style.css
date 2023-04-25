@@ -1,0 +1,1896 @@
+/*CSS Style Key Navagation*/
+/*Homepage Styles begin: line 72
+  Homepage Style End: Line 724
+  Aboutme Styles Begin: Line 726
+  Aboutme Styles End: Line 1023
+  Gear Styles Begin: Line 1025
+  Gear styles End: Line 1373
+  Information Styles Begin: Line 1376
+  Information Styles End: Line 1597
+  Contact Styles Begin: Line 1599
+  Contact Styles End: Line 1851
+*/
+
+/*code citations
+  YouTube. (2021). Build a Starbucks Landing Page Clone. YouTube. Retrieved May 10, 2022, from https://www.youtube.com/watch?v=x_n2FGNsm0o. (Timestamp 58:05)
+  YouTube. (2020). Awesome Card Flip Animation using Css &amp; JavaScript - Easy tutorial. YouTube. Retrieved May 10, 2022, from https://www.youtube.com/watch?v=QGVXmoZWZuw&amp;t=551s. */
+
+/*General styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+  
+  :root {
+    --clr-primary: rgb(0, 128, 0);
+    --clr-secondary: blue;
+    --clr-accent: rgb(248, 248, 57);
+    --clr-background: rgba(51, 49, 49, 0.3);
+
+
+    --fs-xl: 4.5em;
+    --fs-lg: 3.5em;
+    --fs-med: 2em;
+    --fs-sm: .5em;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  p {
+    padding: 0 1em;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  
+  /*Typography*/
+  h1 {
+    font-size: var(--fs-xl);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'josefin sans';
+  }
+  
+  h2 {
+    font-size: var(--fs-lg);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'PT Serif';
+    padding: .5em 1em;
+    color: white;
+  }
+  
+  h3 {
+    font-size: var(--fs-med);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em 0;
+  }
+
+  /*Homepage*/
+  /*Homepage Header styles*/
+  /*Header and navagation styles of Homepage are universal due to php include*/
+  .homepage-conatiner {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .homepage-header{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+  
+  .homepage-header h1 {
+    color: white;
+    text-align: center;
+  }
+  /*End Homepage Header Styles*/
+
+  /*Night toogle*/
+  body{
+    transition: 1.5s;
+  }
+
+  .night-toogle-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 0 2em;
+  }
+
+  .night-toogle-header{
+    color: white;
+    padding-right: 2em;
+  }
+
+  .night-toogle{
+    width: 22px;
+    height: 33px;
+    left: 80px;
+    top: 20px;
+    position: absolute;
+  }
+
+  .night-toogle:hover{
+    cursor: pointer;
+  }
+
+  .moon{
+    background-color: var(--clr-accent);
+    box-shadow: -6px 1px 0 3px #275e8e;
+    border-left: 3px solid#27476D;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 15em 8px 0;
+    transition: 2s;
+  }
+
+  .sun{
+    background-color: #fdd462;
+    box-shadow: 2px 0 0 1px #D19C29;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    transition: 2s;
+  }
+  /*Night toggle end*/
+
+  
+  /*Homepage Navbar styles*/
+  .homepage-item-1 {
+    width: 100%;
+    margin-top: 2em;
+    padding: 0 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+  }
+
+  .homepage-nav-container{
+    margin: 0 2em;
+  }
+
+  .homepage-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  
+  .homepage-nav ul {
+    list-style: none;
+  }
+  
+  .homepage-nav li {
+    padding: 1em 0;
+  }
+  
+  .homepage-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: "PT Serif", serif;
+    font-size: 1.5em;
+  }
+
+  /*code citation
+  YouTube. (2021). Build a Starbucks Landing Page Clone. YouTube. Retrieved May 10, 2022, from https://www.youtube.com/watch?v=x_n2FGNsm0o. 
+  /*Hamburger Menu*/
+  .hamburger{
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    margin-bottom: 30px;
+    z-index: 10;
+    transition: all 0.25s;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger-middle{
+    transform: translateY(7px);
+  }
+
+  .hamburger-bottom{
+    transform: translateY(14px);
+  }
+
+  .open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+
+  .open .hamburger-middle{
+    display: none;
+  }
+
+  .open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+
+  }
+
+  .hamburger-menu-container{
+    display: none;
+  }
+
+ /*mobile menu*/
+.mobile-menu{
+  display: none;
+  position:fixed;
+  top: 10;
+  left: 0;
+  color: #000;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+/*End Homepage Navagation Styles*/
+
+  
+  /*Homepage Main Styles*/
+  .hompage-container-2{
+    display: flex;
+    width: 100%;
+  }
+
+  .homepage-item-2{
+    margin: 2em;
+    text-align: center;
+    border: 2px solid var(--clr-accent);
+    background-color: var(--clr-background);
+  }
+
+
+  .homepage-header-header{
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+  
+  .homepage-about h2,
+  .homepage-about h3,
+  .homepage-video,
+  .homepage-started h2,
+  .homepage-gear h2 {
+    text-align: center;
+    color: white;
+  }
+  
+  .video{
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+    border: 2px solid var(--clr-accent);
+    background-color: white;
+  }
+  
+  .video p{
+    padding: 2em;
+  }
+  /*End Homepage Main Stlyes*/
+
+
+  /*Homepage Section Styles*/
+  .hompage-container-3{
+    display: flex;
+    width: 95%;
+    margin: 2em;
+  }
+  
+  .homepage-started,
+  .homepage-gear{
+    width: 100%;
+    margin: 2em;
+    background-color: white;
+    border: 2px solid var(--clr-accent);
+  }
+
+  .homepage-gear-header{
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+  
+  .homepage-started-image,
+  .homepage-gear-image {
+    display: flex;
+    margin: 1em;
+    
+  }
+  
+  .started-img,
+  .gear-img {
+    padding: 0.5em;
+  }
+  
+  .started p,
+  .gear p {
+    margin-top: 1em;
+  }
+  /*End Homepage Section Styles*/
+
+  
+  /*footer styles*/
+  /*Footer styles are universal through pages due to php include*/
+  .footer {
+    width: 100%;
+    margin-top: 2em;
+    background-color: var(--clr-primary);
+    border-top: 10px solid var(--clr-accent);
+  }
+  
+  .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .row h3{
+    color: white;
+    padding: .5em 0;
+  }
+
+  .homepage-ul-container{
+    width: 100%;
+    margin: 1em 6em;
+  }
+
+  .footer ul {
+    width: 100%;
+    font-size: .8em;
+    list-style: none;
+  }
+  
+  .footer a{
+    font-size: 1.5em;
+  }
+  /*End Homepage Footer Styles*/
+
+
+  /*Responsive Design*/
+  /* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media (max-width: 1200px){
+  .video{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-section{
+    width: 100%;
+  }
+
+  .homepage-gear-header{
+    font-size: 2em;
+  }
+
+  .homepage-started p,
+  .homepage-gear p{
+    padding: 2em;
+    text-align: center;
+  }
+
+  .homepage-started-image,
+  .homepage-gear-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-ul-container{
+    text-align: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up)*/
+@media (max-width: 992px) {
+  .homepage-header{
+    width: 100%;
+  }
+
+  .homepage-container{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hompage-container-2{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+   }
+
+   .homepage-nav{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .homepage-nav ul{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+   }
+
+   .homepage-about{
+    margin: 1em auto;
+    padding: 1em;
+  }
+
+  .homepage-item-2{
+    width: 100%;
+    margin: 2em auto;
+  }
+
+  .homepage-header{
+    width: 100%;
+  }
+
+  .video{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-gear-header{
+    font-size: 2em;
+  }
+
+  .hompage-container-3{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-started{
+    margin: 0 auto;
+  }
+
+  .homepage-started-image,
+  .homepage-gear-image{
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-ul-container{
+    text-align: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up)*/
+@media (max-width: 810px) {
+  .homepage-header{
+    width: 100%;
+  }
+
+  .homepage-header h1{
+    font-size: 3em;
+  }
+
+  .homepage-container{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hompage-container-2{
+    display: block;
+     width: 90%;
+     margin: 0 auto;
+   }
+
+   .homepage-item-1{
+     width: 100%;
+   }
+
+   .homepage-nav ul{
+     display: flex;
+     flex-direction: column;
+   }
+
+   .homepage-nav a{
+    font-size: 2.5em;
+  }
+
+   .homepage-about{
+    margin: 1em auto;
+    padding: 1em;
+  }
+
+  .homepage-item-2{
+    width: 100%;
+    margin: 1em auto;
+  }
+
+  .video{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hompage-container-3{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-started-image,
+  .homepage-gear-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-ul-container{
+    text-align: center;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .homepage-header{
+    width: 100%;
+  }
+
+  .homepage-container{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hompage-container-2{
+    display: block;
+     width: 90%;
+     margin: 0 auto;
+   }
+
+   .homepage-item-1{
+     width: 100%;
+   }
+
+   .homepage-nav ul{
+     display: flex;
+     flex-direction: column;
+   }
+
+   .homepage-about{
+    margin: 1em auto;
+    padding: 1em;
+  }
+
+  .homepage-item-2{
+    width: 100%;
+    margin: 1em auto;
+  }
+
+  .video{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hompage-container-3{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-started-image,
+  .homepage-gear-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-ul-container{
+    text-align: center;
+  }
+
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media (max-width:600px){
+
+  .homepage-header{
+    width: 100%;
+  }
+
+  .homepage-header h1{
+    font-size: 2em;
+  }
+
+  .homepage-container{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hompage-container-2{
+    display: block;
+     width: 90%;
+     margin: 0 auto;
+   }
+
+   .homepage-item-1{
+    display: none;
+  }
+
+  .homepage-about{
+    margin: 1em auto;
+  }
+
+  .homepage-item-2{
+    width: 100%;
+    margin: auto;
+  }
+
+  .homepage-header-header{
+    width: 100%;
+    font-size: 2em;
+  }
+
+  .video{
+    margin: auto;
+  }
+
+  .hamburger-menu-container{
+    display: flex;
+  }
+
+  .mobile-menu-header{
+    padding:0 0 0 .5em;
+    font-size: 3em;
+    color: white;
+  }
+
+  .hamburger{
+    display: block;
+    margin-top: 1em;
+  }
+
+  .mobile-menu{
+    display: block;
+  }
+
+  .mobile-menu ul{
+    line-height: 3;
+    margin-bottom: 30px;
+    padding:30px 0 10px 50px;
+  }
+
+  .mobile-menu li{
+    list-style: none;
+  }
+
+  .mobile-menu a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .mobile-menu a:hover{
+    color: var(--clr-primary);
+  }
+
+  .hidden{
+    transform: translateX(-100%);
+  }
+
+  .no-scroll{
+    overflow: hidden;
+  }
+
+  .homepage-nav{
+   display: none;
+  }
+
+  .homepage-container{
+    display: block;
+  }
+
+  .video{
+    display: block;
+    width: 90%;
+    text-align: center;
+  }
+
+  iframe{
+    width: 200px;
+    height: 200px;
+  }
+
+  .hompage-container-3{
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .homepage-started,
+  .homepage-gear{
+    display: block;
+    width:95%;
+    margin: 1em auto;
+  }
+
+  .homepage-gear-header{
+    font-size: 2em;
+  }
+
+  .homepage-started-image,
+  .homepage-gear-image{
+    display: block;
+    text-align: center;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-ul-container{
+    text-align: center;
+  }
+}
+/*End Homepage*/
+
+  /*Aboutme page*/
+  /*Aboutme Navagation Styles*/
+  .aboutme-nav-container{
+    margin: 0 2em;
+  }
+  
+  .aboutme-item-1 {
+    margin-top: 2em;
+    padding: 0 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+  }
+  /*End Aboutme Navagation Stlyes*/
+
+  /*Main Styles*/
+  .aboutme-container-1 {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .aboutme-item-2 {
+    margin: 2em;
+    text-align: center;
+    border: 2px solid var(--clr-accent);
+    background-color: var(--clr-background);
+  }
+
+  .aboutme-header {
+    margin-bottom: 1em;
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+  
+  .aboutme-image {
+    display: flex;
+    width: 95%;
+    padding: 1em;
+    margin: 2em auto;
+    background-color: white;
+    border: 2px solid var(--clr-accent);
+  }
+  
+  .aboutme-image img {
+    padding: 2em;
+  }
+  
+  .aboutme-header-paragraph p {
+    display: block;
+    text-align: center;
+    margin: 2em 0;
+    padding: 0 2em;
+  }
+  /*End Aboutme Main Styles*/
+
+  /*Aboutme Section Stlyes*/
+  .aboutme-container-3 {
+    width: 95%;
+    margin: 2em auto;
+    border: 2px solid var(--clr-accent);
+    background-color: white;
+  }
+
+  .aboutme-box-header{
+    color: white;
+    text-align: center;
+   background-color: var(--clr-primary);
+   border-bottom: 10px solid var(--clr-accent);  
+  }
+
+  .aboutme-email {
+    display: flex;
+    margin: 2em 1.5em;
+    gap: 2em;
+  }
+
+  .aboutme-box:nth-of-type(1){
+    width: 20%;
+    padding: 2em 0;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid var(--clr-accent);
+    background-color: var(--clr-primary);
+  }
+
+  form h4{
+    color: white;
+    padding: 2em 0;
+  }
+  
+  .form-span{
+    display: block;
+    padding: 1em 0;
+  }
+
+  .aboutme-label{
+    height: 50px;
+    background-color: var(--clr-primary);
+    font-family: PT Sans;
+    font-size: 1em;
+    color: white;
+  }
+
+  .name,
+  .email-address{
+    padding: .5em;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid white;
+  }
+
+  .aboutme-btn{
+    width: 50%;
+    height: 40px;
+    font-size: 1.5em;
+    font-family: 'PT sans';
+    color: white;
+    background-color: var(--clr-primary);
+    box-shadow: 0 12px 16px 0 rgba(207, 205, 205, 0.24), 0 17px 50px 0 rgba(210, 210, 210, 0.19);
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+
+  .aboutme-box:nth-of-type(2){
+    width: 80%;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid black;
+    background-color: white;
+  }
+
+  .aboutme-box p{
+    padding: 1.5em 2em;
+  }
+
+  #demo{
+    margin: 2em;
+    color: white;
+    background-color: var(--clr-primary);
+  }
+  /*End Aboutme Section Styles*/
+
+
+   /*Responsive Design*/
+    /* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media (max-width: 1200px){
+  .aboutme-image{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media (max-width: 992px) {
+  .aboutme-container-1{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutme-item-1{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .aboutme-item-2{
+    width: 90%;
+    margin: 2em auto;
+  }
+
+  .aboutme-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-email{
+    width: 90%;
+    flex-direction: column;
+    margin: 2em auto;
+  }
+
+  .aboutme-box:nth-of-type(1){
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .aboutme-box:nth-of-type(2){
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+}
+
+
+  /* Medium devices (landscape tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .aboutme-container-1{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutme-item-1{
+   width: 90%;
+   padding: 0;
+   margin: 2em auto;
+  }
+
+  .aboutme-image{
+    flex-direction: column;
+  }
+
+  .aboutme-item-2{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .aboutme-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-email{
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .aboutme-box:nth-of-type(1){
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutme-box:nth-of-type(2){
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width:600px){
+  .aboutme-container-1{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutme-item-2{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .aboutme-header{
+    font-size: 2em;
+    padding: .5em;
+    color: white;
+  }
+
+  .aboutme-image{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-image img{
+   height: 300px;
+  }
+
+  .aboutme-box-header{
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  .aboutme-email{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+  }
+
+  .name,
+  .email-address{
+    width: 90%;
+  }
+
+  .aboutme-btn{
+    width: 90%;
+  }
+
+  .aboutme-box:nth-of-type(1){
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutme-box:nth-of-type(2){
+    width: 100%;
+    text-align: center;
+  }
+
+}
+/*End Aboutme Page*/
+  
+  /*Gear page*/
+  /*Gear page Main Styles*/
+  .gear-container-2{
+    display: flex;
+  }
+
+  .gear-item-2 {
+    margin: 2em;
+    text-align: center;
+    border: 2px solid var(--clr-accent);
+  }
+
+  .gear-col-row{
+    background-color: var(--clr-background);
+  }
+
+  .gear-col-row-header{
+    margin: 0 auto;
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+
+  .gear-row-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    text-align: center;
+    margin: 2em;
+  }
+
+  .gear-budget-header-header{
+    font-size: 2em;
+    color: white;
+  }
+
+  .gear-budget-header{
+    font-size: 1em;
+    color: white;
+  }
+
+  .gear-budget img{
+    border: 10px solid var(--clr-primary);
+    margin: 2em;
+  }
+
+  .gear-col-row p{
+    padding: 2em;
+    font-size: 20px;
+    color: white;
+  }
+  /*End Gear Page Main Stlyes*/
+
+  /*Gear Page Navagation Stlyes*/
+  .gear-nav-container{
+    margin: 0 2em;
+  }
+  
+  .gear-item-1 {
+    margin-top: 2em;
+    padding: 0 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+  }
+  /*End Gear Page Navagation Stlyes*/
+  
+/*Gear Page Section Stlyes*/
+.gear-section-container{
+  border: 2px solid var();
+}
+
+/*code citation*/
+  /*YouTube. (2020). Awesome Card Flip Animation using Css &amp; JavaScript - Easy tutorial. YouTube. Retrieved May 10, 2022, from https://www.youtube.com/watch?v=QGVXmoZWZuw&amp;t=551s. */
+
+  /*Flip Card Animation*/
+  .card-container{
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+}
+
+.card-container > * {
+ width: 100%;
+  margin: 0 auto;
+}
+
+.card{
+    height: 600px;
+    margin: 0 auto;
+}
+
+.card-inner-1,
+.card-inner-2,
+.card-inner-3{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-inner-1.is-flipped,
+.card-inner-2.is-flipped,
+.card-inner-3.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-front{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header-header{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.card-front-image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+}
+
+.card-front-image-container h3{
+  text-align: center;
+  font-size: 1em;
+}
+
+.card-front-image-container img{
+    margin: 1em;
+}
+
+.card-face-back{
+    transform: rotateY(180deg);
+}
+
+.card-content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.card-header{
+    position: relative;
+    padding: 30px 30px 40px;
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+    text-align: center;
+}
+
+.card-header h2{
+    color: white;
+    font-size: 32px;
+}
+
+.card-header:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border: 0 0 50% 0;
+}
+
+.card-body{
+    margin: 2em;
+}
+
+.card-body p{
+  text-align: center;
+}
+
+.card-body-header{
+    text-align: center;
+    color: black;
+}
+
+.card-body-pricing{
+  color: #000;
+}
+
+.card-body span{
+    display: block;
+}
+ /*End of Gear Page Section Stlyes*/
+  
+
+  /*Responsive Design*/
+  /* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media(max-width: 1500px) {
+  .gear-col-row{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .gear-row-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gear-budget{
+    margin: 2em auto;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up)*/
+@media(max-width: 992px) {
+  .gear-container-2{
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .gear-item-1{
+    width: 90%;
+    margin: 2em auto;
+  }
+
+  .gear-item-2{
+    width: 90%;
+  }
+
+  .gear-section-container{
+    margin: 2em auto;
+  }
+
+  .gear-col-row-header{
+    font-size: 3em;
+  }
+
+  .gear-row-content{
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .gear-budget{
+    margin: 0 auto;
+  }
+
+  .card-container{
+    flex-direction: column;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up)*/
+@media(max-width: 768px) {
+  .gear-container-2{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .gear-item-1{
+    width: 90%;
+    padding: 0;
+    margin: 2em auto;
+  }
+
+  .gear-item-2{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .gear-col-row-header{
+    font-size: 2.5em;
+  }
+
+  .gear-row-content{
+    flex-direction: column;
+  }
+
+  .card-container{
+    flex-direction: column;
+  }
+
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media (max-width: 600px) {
+  .gear-container-2{
+    width: 100%;
+    display: block;
+  }
+
+  .gear-item-2{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .gear-col-row-header{
+    font-size: 2em;
+  }
+
+  .gear-row-content{
+    flex-direction: column;
+  }
+
+  .gear-budget img{
+    margin: 2em auto;
+  }
+
+  .gear-section-container{
+    margin: 2em auto;
+  }
+
+  .card-container{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .card{
+    flex: 90%;
+    margin: 0 auto;
+  }
+
+}
+/*End Gear Page*/
+
+
+  /*information page*/
+  /*Information Navagation Styles*/
+  .info-item-1 {
+    width: 100%;
+    margin-top: 2em;
+    padding: 0 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+  }
+
+  .info-nav-container{
+    margin: 0 2em;
+  }
+  /*End Information Page Navagation Stlyes*/
+
+  /*Information Page Main Stlyes*/
+  .info-container-2{
+    display: flex;
+    width: 100%;
+  }
+
+  .info-item-2 {
+    margin: 2em;
+    text-align: center;
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-accent);
+  }
+
+  .info-header{
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+  }
+
+  .info-content{
+    margin: 2em;
+    padding: 2em;
+    background-color: white;
+    border: 2px solid var(--clr-accent);
+  }
+
+  .info-content-container{
+    width: 100%;
+    display: flex;
+    margin: 2em auto;
+    padding: 2em;
+  }
+
+  .info-content-container p{
+    padding: 2em;
+  }
+  .info-database-conatiner{
+    padding: 2em 0;
+    margin: 0 auto;
+    background-color: var(--clr-primary);
+    border: 2px solid var(--clr-accent);
+  }
+
+  .info-database-header{
+    padding: 2em;
+    color: white;
+  }
+
+  .info-form-control{
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .info-form-label{
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .info-form-input{
+    width: 20%;
+    height: 40px;
+    font-family: 'PT sans';
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+    background: none;
+  }
+
+  .database-btn{
+    width: 20%;
+    height: 40px;
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-family: 'PT sans';
+    color: white;
+    background-color: var(--clr-primary);
+    box-shadow: 0 12px 16px 0 rgba(207, 205, 205, 0.24), 0 17px 50px 0 rgba(210, 210, 210, 0.19);
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  /*End Information Page Main Styles*/
+  
+
+  /*Responsive Design*/
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media(max-width: 1200px) {
+  .info-content-container{
+    flex-direction: column;
+  }
+  .info-form-control-span{
+    display: block;
+  }
+
+  .info-form-input{
+    width: 80%;
+  }
+
+  .database-btn{
+    width: 80%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media(max-width: 992px) {
+  .info-container-2{
+    display: block;
+  }
+
+  .info-content-container{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .info-content-container p{
+    padding: 2em 0;
+  }
+
+  .info-form-control-span{
+    display: block;
+  }
+
+  .info-form-input{
+    width: 80%;
+  }
+
+  .database-btn{
+    width: 80%;
+  }
+
+}
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media(max-width: 768px) {
+  .info-container-2{
+    display: block;
+  }
+
+  .info-item-1{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .info-content-container{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .info-content-container p{
+    padding: 2em 0;
+  }
+
+  .info-form-control-span{
+    display: block;
+  }
+
+  .info-form-input{
+    width: 80%;
+  }
+
+  .database-btn{
+    width: 80%;
+  }
+
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media (max-width: 600px) {
+  .info-container-2{
+    display: block;
+  }
+
+  .info-content-container{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .info-header{
+    font-size: 2em;
+  }
+
+  .info-content-container p{
+    padding: 2em 0;
+  }
+
+  .info-content h3{
+    font-size: 1em;
+    padding: 0 1em;
+  }
+
+  .info-database-header{
+    font-size: 1em;
+  }
+
+  .info-form-control-span{
+    display: block;
+  }
+
+  .info-form-input{
+    width: 80%;
+  }
+
+  .database-btn{
+    width: 80%;
+  }
+}
+/*End Information Page*/
+
+/*Contact page*/
+/*Contact Page Navagation Stlyes*/
+.contact-item-1 {
+  width: 100%;
+  margin-top: 2em;
+  padding: 0 2em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--clr-primary);
+}
+
+.contact-nav-container{
+  margin: 0 2em;
+}
+/*End Contact Page Navagation Styles*/ 
+
+  /*Contact Page Main Styles*/
+  .contact-container-2{
+    display: flex;
+  }
+
+  .contact-item-2 {
+    margin: 2em;
+    text-align: center;
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-accent);
+  }
+
+  .contact-about-header{
+    background-color: var(--clr-primary);
+    border-bottom: 10px solid var(--clr-accent);
+ }
+
+ .contact-about{
+  width: 90%;
+  margin: 1em auto;
+  background-color: white;
+  border: 2px solid var(--clr-accent);
+}
+
+.contact-about-paragragh-container{
+  display: flex;
+}
+
+.contact-about img{
+  padding: 1em;
+}
+
+.contact-about-paragraph{
+  padding: 2em;
+}
+
+.contact-about-paragragh p{
+    text-align: center;
+    margin: 2em;
+}
+  /*End Contact Page Main Styles*/
+
+  /*Contact Section Styles*/
+  .contact-form-container{
+    margin: 2em;
+  }
+
+  .contact-contact-form{
+    margin: 2em auto;
+    border-radius: 15px;
+    background: linear-gradient(var(--clr-primary), var(--clr-accent));
+    border: 2px solid var(--clr-accent);
+  }
+
+  .contact-header{
+   background-color: var(--clr-primary);
+   border-radius: 15px 15px 0 0;
+   border-bottom: 10px solid var(--clr-accent);
+}
+
+.contact-form{
+  padding: 2em;
+}
+
+  .contact-span{
+    display: block;
+    padding: 1em 0;
+  }
+
+  .contact-label{
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .contact-name,
+  .contact-email-address{
+    width: 20%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+  }
+
+  .contact-textarea-header{
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .contact-textarea{
+    width: 20%;
+    border: 2px solid white;
+    background: none;
+  }
+
+  .btn{
+      width: 20%;
+      height: 50px;
+      font-size: 1.5em;
+      margin-bottom: 2em;
+      background-color: var(--clr-primary);
+      color: white;
+      border: 5px solid white;
+      border-radius: 5px;
+  }
+  /*End Contact Section Styles*/
+
+  /*Responsive Design*/
+  @media (max-width:1400px){
+    .contact-about-paragragh-container{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media(max-width: 1200px) {
+      .contact-about-paragragh-container{
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .contact-name,
+    .contact-email-address,
+    .contact-textarea,
+    .btn{
+      width: 80%;
+    }
+  } 
+
+    /* Large devices (laptops/desktops, 992px and up) */
+  @media(max-width: 992px){
+    .contact-container-2{
+      display: block;
+    }
+
+    .contact-about-header{
+      font-size: 3em;
+    }
+
+    .contact-about-paragragh-container{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-header{
+      font-size: 3em;
+    }
+
+    .contact-name,
+    .contact-email-address,
+    .contact-textarea,
+    .btn{
+      width: 80%;
+    }
+  } 
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media(max-width: 768px) {
+    .contact-container-2{
+      flex-direction: column;
+    }
+
+    .contact-container-1{
+      display: block;
+    }
+
+    .contact-item-1{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .contact-container-2{
+      flex-direction: column;
+    }
+
+    .contact-about-header{
+      font-size: 2em;
+    }
+
+    .contact-about-paragragh-container{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-header{
+      font-size: 2em;
+    }
+
+    .contact-name,
+    .contact-email-address,
+    .contact-textarea,
+    .btn{
+      width: 80%;
+    }
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media (max-width:600px){
+    .contact-container-1{
+      display: block;
+    }
+
+    .contact-container-2{
+      flex-direction: column;
+    }
+
+    .contact-about-header{
+      font-size: 1.5em;
+    }
+
+    .contact-about img{
+      width: 80%;
+      height: 250px;
+    }
+
+    .contact-about-paragragh-container{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-about-paragraph h3{
+      font-size: 1em;
+    }
+
+    .contact-form-container{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .contact-header{
+      font-size: 1.5em;
+    }
+
+    .contact-contact-form h3{
+      font-size: 1em;
+    }
+  }
+/*End Contact Page*/
